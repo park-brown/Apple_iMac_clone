@@ -31,7 +31,7 @@ const theme = createTheme({
 	palette: {
 		common: {
 			button_background: '#0071e3',
-			button_background_onHover: '#0077ED',
+			button_background_hover: '#0077ED',
 			link: '#06c'
 		}
 	},
