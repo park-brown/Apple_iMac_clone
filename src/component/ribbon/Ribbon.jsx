@@ -49,7 +49,7 @@ const Ribbon = () => {
 			<RibbonContent>
 				<Typography variant='caption' component='p'>
 					Save on Mac for college with education pricing. And get AirPods.
-					<LinkButton sx={{ ml: '8px' }} component='a' endIcon={<ArrowForwardIosIcon />}>
+					<LinkButton sx={{ ml: '8px' }} component='button' endIcon={<ArrowForwardIosIcon />}>
 						shop now
 					</LinkButton>
 				</Typography>
