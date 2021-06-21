@@ -34,8 +34,7 @@ const Hero = () => {
 			sx={{
 				width: '100%',
 				p: { mobile: '44px 0px', tablet: '63px 0 98px 0', laptop: '63px 0 120px 0' },
-				overflow: 'hidden',
-				height: '900px'
+				overflow: 'hidden'
 			}}>
 			<Box
 				className='section-content'

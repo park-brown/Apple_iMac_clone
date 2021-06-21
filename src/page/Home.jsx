@@ -4,6 +4,7 @@ import ProductNavbar from '../component/productNav/ProductNavBar';
 import { Grid } from '@material-ui/core';
 import Ribbon from '../component/ribbon/Ribbon';
 import Hero from '../sections/iMac_hero/Hero';
+import Compare from '../sections/compare/Compare';
 const Home = () => {
 	return (
 		<React.Fragment>
@@ -12,6 +13,7 @@ const Home = () => {
 			<Grid container component='main' sx={{ width: '100%' }}>
 				<Ribbon />
 				<Hero />
+				<Compare />
 			</Grid>
 		</React.Fragment>
 	);
