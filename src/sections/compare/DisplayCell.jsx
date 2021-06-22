@@ -4,5 +4,9 @@ import { styled } from '@material-ui/core/styles';
 export const DeviceDisplayCell = styled(Box, { name: 'device-display-cell' })(({ gridArea }) => ({
 	gridArea: gridArea,
 	width: '100%',
-	padding: '7px 0 0 0'
+	padding: '7px 0 0 0',
+	display: 'flex',
+	flexDirection: 'column',
+	alignItems: 'center',
+	justifyContent: 'center'
 }));

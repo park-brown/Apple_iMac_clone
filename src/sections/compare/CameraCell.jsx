@@ -9,6 +9,7 @@ export const DeviceCameraCell = styled(Box, { name: 'device-camera-cell' })(({ g
 	display: 'flex',
 	alignItems: 'center',
 	flexDirection: 'column',
+
 	[theme.breakpoints.up('tablet')]: {
 		width: '97%'
 	},

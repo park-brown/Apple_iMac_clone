@@ -54,3 +54,19 @@ export const DeviceAvailableColor = styled('figure', { name: 'device-available-c
 		margin: '12px 0 10px 0'
 	}
 }));
+export const DeviceAvailableColorForDesktop = styled('figure', { name: 'device-available-color' })(
+	({ theme, image }) => ({
+		margin: '16px 0px 14px 0px',
+		height: image.height.mobile,
+		width: image.width.mobile,
+		backgroundImage: image.url.mobile,
+		backgroundSize: 'cover',
+		backgroundRepeat: 'no-repeat',
+		[theme.breakpoints.up('tablet')]: {
+			margin: '12px 0 10px 0',
+			height: image.height.tablet,
+			width: image.width.tablet,
+			backgroundImage: image.url.tablet
+		}
+	})
+);
