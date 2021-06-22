@@ -118,7 +118,7 @@ const DeviceAvailableColor = styled('figure', { name: 'device-available-color' }
 }));
 const DeviceBuyCell = styled(Box, { name: 'buy-cell' })(({ gridArea }) => ({
 	gridArea: gridArea,
-	marginTop: '15px',
+	// marginTop: '-15px',
 	paddingBottom: '11px',
 	paddingTop: '4px',
 	borderBottom: '1px solid #d2d2d7',
@@ -136,6 +136,191 @@ const BuyButton = styled(Button)(({ theme }) => ({
 	color: '#fff',
 	'&:hover': {
 		backgroundColor: theme.palette.common.button_background_hover
+	}
+}));
+const DeviceDisplayCell = styled(Box, { name: 'device-display-cell' })(({ gridArea }) => ({
+	gridArea: gridArea,
+	width: '100%',
+	padding: '7px 0 0 0'
+}));
+const FootNote = styled('sup')(() => ({
+	top: 'initial',
+	position: 'relative',
+	verticalAlign: 'baseline',
+	fontFeatureSettings: `'numr'`,
+	fontSize: '1em'
+}));
+const DeviceChipCell = styled(Box, { name: 'device-chip-cell' })(({ gridArea, theme }) => ({
+	gridArea: gridArea,
+	padding: '4px 0 0 0',
+	width: '90%',
+	margin: '0 auto',
+	display: 'flex',
+	alignItems: 'center',
+	flexDirection: 'column',
+	[theme.breakpoints.up('tablet')]: {
+		width: '100%'
+	}
+}));
+
+const ChipImage = styled('figure', { name: 'chip-icon' })(({ icon }) => ({
+	width: '48px',
+	height: '44px',
+	backgroundImage: icon,
+	margin: '0 auto 5px auto',
+	backgroundSize: 'cover',
+	backgroundRepeat: 'no-repeat'
+}));
+const DeviceMemoryCell = styled(Box, { name: 'device-chip-cell' })(({ gridArea, theme }) => ({
+	gridArea: gridArea,
+	padding: '4px 0 0 0',
+	width: '90%',
+	margin: '0 auto',
+	display: 'flex',
+	alignItems: 'center',
+	flexDirection: 'column',
+	[theme.breakpoints.up('tablet')]: {
+		width: '100%'
+	}
+}));
+const MemoryImage = styled('figure', { name: 'memory-icon' })(({ icon }) => ({
+	width: '48px',
+	height: '44px',
+	backgroundImage: icon,
+	margin: '0 auto 11px auto',
+	backgroundSize: 'cover',
+	backgroundRepeat: 'no-repeat'
+}));
+const DeviceStorageCell = styled(Box, { name: 'device-storage-cell' })(({ gridArea, theme }) => ({
+	gridArea: gridArea,
+	padding: '4px 0 0 0',
+	width: '53%',
+	margin: '0 auto',
+	display: 'flex',
+	alignItems: 'center',
+	flexDirection: 'column',
+	[theme.breakpoints.up('tablet')]: {
+		width: '94%',
+		margin: '-5px auto 0 auto'
+	},
+	[theme.breakpoints.up('laptop')]: {
+		width: '95%',
+		margin: '0 auto'
+	}
+}));
+const DeviceBatteryCell = styled(Box, { name: 'device-battery-cell' })(({ gridArea, theme }) => ({
+	gridArea: gridArea,
+	padding: '4px 0 0 0',
+	width: '100%',
+	margin: '0 auto',
+	display: 'flex',
+	alignItems: 'center',
+	flexDirection: 'column',
+	[theme.breakpoints.up('tablet')]: {
+		width: '90%'
+	},
+	[theme.breakpoints.up('laptop')]: {
+		width: '100%'
+	}
+}));
+const BatteryImage = styled('figure', { name: 'battery-icon' })(({ icon }) => ({
+	width: '48px',
+	height: '44px',
+	backgroundImage: icon,
+	margin: '0 auto 5px auto',
+	backgroundSize: 'cover',
+	backgroundRepeat: 'no-repeat'
+}));
+const DeviceCameraCell = styled(Box, { name: 'device-camera-cell' })(({ gridArea, theme }) => ({
+	gridArea: gridArea,
+	padding: '0 0 0 0',
+	width: '97%',
+	margin: '0 auto',
+	display: 'flex',
+	alignItems: 'center',
+	flexDirection: 'column',
+	[theme.breakpoints.up('tablet')]: {
+		width: '97%'
+	},
+	[theme.breakpoints.up('laptop')]: {
+		width: '100%'
+	}
+}));
+const CameraImage = styled('figure', { name: 'camera-icon' })(({ icon }) => ({
+	width: '48px',
+	height: '44px',
+	backgroundImage: icon,
+	margin: '0 auto 3px auto',
+	backgroundSize: 'cover',
+	backgroundRepeat: 'no-repeat'
+}));
+const DeviceWeightCell = styled(Box, { name: 'device-weight-cell' })(({ gridArea, theme }) => ({
+	gridArea: gridArea,
+	padding: '4px 0 0 0',
+	width: '100%',
+	margin: '0 auto',
+	display: 'flex',
+	alignItems: 'center',
+	flexDirection: 'column',
+	[theme.breakpoints.up('tablet')]: {
+		width: '90%'
+	},
+	[theme.breakpoints.up('laptop')]: {
+		width: '100%'
+	}
+}));
+const DeviceKeyBoardCell = styled(Box, { name: 'device-keyboard-cell' })(({ gridArea, theme }) => ({
+	gridArea: gridArea,
+	padding: '4px 0 0 0',
+	width: '100%',
+	margin: '0 auto 6px auto',
+	display: 'flex',
+	alignItems: 'center',
+	flexDirection: 'column',
+	[theme.breakpoints.up('tablet')]: {
+		width: '90%'
+	},
+	[theme.breakpoints.up('laptop')]: {
+		width: '100%'
+	}
+}));
+const KeyboardImage = styled('figure', { name: 'camera-icon' })(
+	({ theme, icon, width, height, margin, padding, backgroundSize }) => ({
+		width: width.mobile,
+		height: height.mobile,
+		backgroundImage: icon,
+		margin: margin,
+		padding: padding,
+		backgroundSize: backgroundSize.mobile,
+		backgroundRepeat: 'no-repeat',
+		[theme.breakpoints.up('tablet')]: {
+			width: width.tablet,
+			height: height.tablet,
+			backgroundSize: backgroundSize.tablet
+		},
+		[theme.breakpoints.up('laptop')]: {
+			width: width.laptop,
+			height: height.laptop,
+			backgroundSize: backgroundSize.laptop
+		}
+	})
+);
+const DeviceCtaCell = styled(Box, { name: 'device-keyboard-cell' })(({ gridArea, theme }) => ({
+	gridArea: gridArea,
+	padding: '22px 0 12px 0',
+	width: '100%',
+	margin: '0 auto 0 auto',
+	display: 'flex',
+	alignItems: 'center',
+	flexDirection: 'column',
+	borderTop: '1px solid #d2d2d7',
+	[theme.breakpoints.up('tablet')]: {
+		width: '90%',
+		padding: '22px 0 74px 0'
+	},
+	[theme.breakpoints.up('laptop')]: {
+		width: '100%',
+		padding: '22px 0 0 0'
 	}
 }));
 const DesktopPanel = styled(TabPanel, { name: 'panel-for-desktop' })(({ theme }) => ({}));
@@ -168,6 +353,48 @@ const Notebook__Descriptions = [
 				width: '70px',
 				height: '19px'
 			}
+		},
+		device_display: {
+			h4: '13.3”',
+			p: 'Retina display',
+			footnote: '1'
+		},
+		device_chip: {
+			url: 'url(./compare/notebook/compare_icon_m1_large_2x.png)',
+			p1: 'Apple M1 chip'
+		},
+		device_memory: {
+			url: 'url(./compare/notebook/compare_icon_unified_memory_large_2x.png)',
+			p1: 'Up to 16GB unified memory',
+			p2: 'For increased performance and power efficiency'
+		},
+		device_storage: {
+			h4: '2TB',
+			p: 'Maximum configurable storage',
+			footnote: '2'
+		},
+		device_battery: {
+			url: 'url(./compare/notebook/compare_icon_battery_large_2x.png)',
+			p: 'Up to 18 hours battery life',
+			footnote: '3'
+		},
+		device_camera: {
+			url: 'url(./compare/notebook/compare_icon_camera_large_2x.png)',
+			p1: '720p FaceTime HD camera',
+			p2: 'With the image signal processor of M1 for drastically improved performance'
+		},
+		device_weight: {
+			h4: '2.8 lb.',
+			p: 'Weight'
+		},
+		device_keyboard: {
+			url: 'url(./compare/notebook/compare_icon_touchid_large_2x.png)',
+			width: { mobile: '48px', tablet: '48px', laptop: '48px' },
+			height: { mobile: '44px', tablet: '44px', laptop: '48px' },
+			backgroundSize: { mobile: 'cover', tablet: 'cover', laptop: 'cover' },
+			padding: '0 0 5px 0',
+			margin: '0 auto 5px auto',
+			p: 'Touch ID'
 		}
 	},
 	//Macbook Pro 13
@@ -198,6 +425,50 @@ const Notebook__Descriptions = [
 				width: '45px',
 				height: '19px'
 			}
+		},
+		device_display: {
+			h4: '13.3”',
+			p: 'Retina display',
+			footnote: '1'
+		},
+		device_chip: {
+			url: 'url(./compare/notebook/compare_icon_m1_large_2x.png)',
+			p1: 'Apple M1 chip',
+			p2: 'Also available with Intel Core i5 or i7 processor'
+		},
+		device_memory: {
+			url: 'url(./compare/notebook/compare_icon_unified_memory_large_2x.png)',
+			p1: 'Up to 16GB unified memory',
+			footnote: '4',
+			p2: 'For increased performance and power efficiency'
+		},
+		device_storage: {
+			h4: '2TB',
+			p: 'Maximum configurable storage',
+			footnote: '4'
+		},
+		device_battery: {
+			url: 'url(./compare/notebook/compare_icon_battery_large_2x.png)',
+			p: 'Up to 20 hours battery life',
+			footnote: '5'
+		},
+		device_camera: {
+			url: 'url(./compare/notebook/compare_icon_camera_large_2x.png)',
+			p1: '720p FaceTime HD camera',
+			p2: 'With the image signal processor of M1 for drastically improved performance'
+		},
+		device_weight: {
+			h4: '3.0 lb.',
+			p: 'Weight'
+		},
+		device_keyboard: {
+			url: 'url(./compare/notebook/compare_icon_touchbar_large_2x.png)',
+			width: { mobile: '165px', tablet: '165px', laptop: '165px' },
+			height: { mobile: '38px', tablet: '38px', laptop: '38px' },
+			backgroundSize: { mobile: 'contain', tablet: 'cover', laptop: 'cover' },
+			padding: '0 0 10px 0',
+			margin: '0 auto 5px auto',
+			p: 'Touch Bar and Touch ID'
 		}
 	},
 	//Macbook Pro 16
@@ -228,6 +499,47 @@ const Notebook__Descriptions = [
 				width: '45px',
 				height: '19px'
 			}
+		},
+		device_display: {
+			h4: '13.3”',
+			p: 'Retina display',
+			footnote: '1'
+		},
+		device_chip: {
+			url: 'url(./compare/notebook/compare_icon_intel_large_2x.png)',
+			p1: 'Up to Intel Core i9 processor'
+		},
+		device_memory: {
+			url: 'url(./compare/notebook/compare_icon_memory_large_2x.png)',
+			p1: 'Up to 16GB unified memory'
+		},
+		device_storage: {
+			h4: '8TB',
+			p: 'Maximum configurable storage',
+			footnote: '2'
+		},
+		device_battery: {
+			url: 'url(./compare/notebook/compare_icon_battery_large_2x.png)',
+			p: 'Up to 11 hours battery life',
+			footnote: '6'
+		},
+		device_camera: {
+			url: 'url(./compare/notebook/compare_icon_camera_large_2x.png)',
+			p1: '720p FaceTime HD camera',
+			p2: ''
+		},
+		device_weight: {
+			h4: '4.3 lb.',
+			p: 'Weight'
+		},
+		device_keyboard: {
+			url: 'url(./compare/notebook/compare_icon_touchbar_large_2x.png)',
+			width: { mobile: '165px', tablet: '165px', laptop: '165px' },
+			height: { mobile: '38px', tablet: '38px', laptop: '38px' },
+			backgroundSize: { mobile: 'contain', tablet: 'cover', laptop: 'cover' },
+			padding: '0 0 10px 0',
+			margin: '0 auto 5px auto',
+			p: 'Touch Bar and Touch ID'
 		}
 	}
 ];
@@ -266,27 +578,141 @@ const Compare = () => {
 						</TabList>
 
 						<NoteBookPanel value='1'>
-							{Notebook__Descriptions.map(({ gridAreas, image, device_content }) => (
-								<React.Fragment key={gridAreas.device_wrapper}>
-									<DeviceWrapper gridArea={gridAreas.device_wrapper}>
-										<ImageWrapper>
-											<Image image={image} />
-										</ImageWrapper>
-										<DeviceContent>
-											<Typography
-												variant='eyebrow'
-												sx={{ mb: { mobile: '7.6px', tablet: '8.4px', laptop: '9.6px' }, minWidth: '161px' }}>
-												{device_content.eyebrow}
-											</Typography>
-											<Typography variant='body_reduced'>{device_content.priceTag}</Typography>
-											<DeviceAvailableColor image={device_content.availableColor_logo} />
-										</DeviceContent>
+							{Notebook__Descriptions.map(
+								({
+									gridAreas,
+									image,
+									device_content,
+									device_display,
+									device_chip,
+									device_memory,
+									device_storage,
+									device_battery,
+									device_camera,
+									device_weight,
+									device_keyboard
+								}) => (
+									<React.Fragment key={gridAreas.device_wrapper}>
+										<DeviceWrapper gridArea={gridAreas.device_wrapper}>
+											<ImageWrapper>
+												<Image image={image} />
+											</ImageWrapper>
+											<DeviceContent>
+												<Typography
+													variant='eyebrow'
+													sx={{ mb: { mobile: '7.6px', tablet: '8.4px', laptop: '9.6px' }, minWidth: '161px' }}>
+													{device_content.eyebrow}
+												</Typography>
+												<Typography variant='body_reduced'>{device_content.priceTag}</Typography>
+												<DeviceAvailableColor image={device_content.availableColor_logo} />
+											</DeviceContent>
+										</DeviceWrapper>
 										<DeviceBuyCell gridArea={gridAreas.buy_cell}>
 											<BuyButton>Buy</BuyButton>
 										</DeviceBuyCell>
-									</DeviceWrapper>
-								</React.Fragment>
-							))}
+										<DeviceDisplayCell gridArea={gridAreas.display_cell}>
+											<Typography variant='eyebrow' component='h4'>
+												{device_display.h4}
+											</Typography>
+											<Typography variant='body_reduced' component='p'>
+												{device_display.p}
+												<FootNote>{device_display.footnote}</FootNote>
+											</Typography>
+										</DeviceDisplayCell>
+										<DeviceChipCell gridArea={gridAreas.chip_cell}>
+											<ChipImage icon={device_chip.url} />
+											<Typography variant='body_reduced' sx={{ width: '68%', mx: 'auto' }}>
+												{device_chip.p1}
+											</Typography>
+											{device_chip.p2 ? (
+												<Typography
+													variant='body_reduced'
+													sx={{ width: '68%', mx: 'auto', maxWidth: '200px', color: '#86868b' }}>
+													{device_chip.p2}
+												</Typography>
+											) : null}
+										</DeviceChipCell>
+										<DeviceMemoryCell gridArea={gridAreas.memory_cell}>
+											<MemoryImage icon={device_memory.url} />
+											<Typography variant='body_reduced' sx={{ width: '88%', mx: 'auto' }}>
+												{device_memory.p1}
+												{device_memory.footnote ? <FootNote>{device_memory.footnote}</FootNote> : null}
+											</Typography>
+											<Typography
+												variant='body_reduced'
+												sx={{ width: '88%', mx: 'auto', maxWidth: '200px', color: '#86868b' }}>
+												{device_memory.p2}
+											</Typography>
+										</DeviceMemoryCell>
+										<DeviceStorageCell gridArea={gridAreas.storage_cell}>
+											<Typography variant='eyebrow' component='h4' sx={{ mb: '5px' }}>
+												{device_storage.h4}
+											</Typography>
+											<Typography variant='body_reduced' component='p' sx={{ mb: '5px' }}>
+												{device_storage.p} <FootNote>{device_storage.footnote}</FootNote>
+											</Typography>
+										</DeviceStorageCell>
+										<DeviceBatteryCell gridArea={gridAreas.battery_cell}>
+											<BatteryImage icon={device_battery.url} />
+											<Typography
+												variant='body_reduced'
+												sx={{ width: '88%', mx: 'auto', maxWidth: '200px', color: '#86868b' }}>
+												{device_battery.p}
+												<FootNote>{device_battery.footnote}</FootNote>
+											</Typography>
+										</DeviceBatteryCell>
+										<DeviceCameraCell gridArea={gridAreas.camera_cell}>
+											<CameraImage icon={device_camera.url} />
+											<Typography
+												variant='body_reduced'
+												sx={{ width: { mobile: '77%', tablet: '100%', laptop: '97%' }, mx: 'auto' }}>
+												{device_camera.p1}
+											</Typography>
+											<Typography
+												variant='body_reduced'
+												sx={{
+													width: { mobile: '77%', tablet: '100%', laptop: '97%' },
+													mx: 'auto',
+													maxWidth: '200px',
+													color: '#86868b'
+												}}>
+												{device_camera.p2}
+											</Typography>
+										</DeviceCameraCell>
+										<DeviceWeightCell gridArea={gridAreas.weight_cell}>
+											<Typography variant='eyebrow' component='h4' sx={{ mb: '4px' }}>
+												{device_weight.h4}
+											</Typography>
+											<Typography variant='body_reduced' component='p'>
+												{device_weight.p}
+											</Typography>
+										</DeviceWeightCell>
+										<DeviceKeyBoardCell gridArea={gridAreas.keyboard_cell}>
+											<KeyboardImage
+												icon={device_keyboard.url}
+												width={device_keyboard.width}
+												height={device_keyboard.height}
+												backgroundSize={device_keyboard.backgroundSize}
+												margin={device_keyboard.margin}
+												padding={device_keyboard.padding}
+											/>
+											<Typography
+												variant='body_reduced'
+												sx={{
+													width: { mobile: '77%', tablet: '100%', laptop: '97%' },
+													mx: 'auto',
+													maxWidth: '200px',
+													color: '#86868b'
+												}}>
+												{device_keyboard.p}
+											</Typography>
+										</DeviceKeyBoardCell>
+										<DeviceCtaCell gridArea={gridAreas.cta_cell}>
+											<CustomButton>learn more</CustomButton>
+										</DeviceCtaCell>
+									</React.Fragment>
+								)
+							)}
 						</NoteBookPanel>
 						<DesktopPanel value='2'>Item Two</DesktopPanel>
 					</TabContext>
