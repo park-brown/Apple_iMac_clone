@@ -2,7 +2,19 @@ import React from 'react';
 import { Grid, Box, Typography, Button } from '@material-ui/core';
 import { styled } from '@material-ui/core/styles';
 import CustomButton from '../../component/LinkButton/LinkButton';
+const HeroButton = styled(Button, { name: 'product-buy-button' })(({ theme }) => ({
+	[theme.breakpoints.up('mobile')]: {
+		...theme.typography.button,
+		padding: '8px 16px',
+		borderRadius: '980px',
 
+		color: '#fff',
+		backgroundColor: theme.palette.common.button_background,
+		'&:hover': {
+			backgroundColor: theme.palette.common.button_background_hover
+		}
+	}
+}));
 const RetailSection = () => {
 	return (
 		<Grid
@@ -32,7 +44,7 @@ const RetailSection = () => {
 							backgroundImage: 'linear-gradient(135deg, #fbd0b8 0%, #fcdcbe 48%, #fcdcbe 49%, #fceac3 100%)',
 							display: 'flex',
 							p: { mobile: '213px 0 58px 0', tablet: '57px 0', laptop: '138px 0' },
-							m: { mobile: 0, tablet: '0 2.08333%' },
+							// m: { mobile: 0, tablet: '0 2.08333%' },
 							height: { mobile: '415px', tablet: '284px', laptop: '490px' }
 						}}>
 						<Box className='copy-container' sx={{ flexBasis: { mobile: '100%', tablet: '50%', laptop: '41.66667%' } }}>
@@ -98,7 +110,7 @@ const RetailSection = () => {
 							width: '100%',
 							backgroundColor: '#f2f2f2',
 							display: 'flex',
-							m: { tablet: 0, laptop: '0 2.08333%' },
+							// m: { tablet: 0, laptop: '0 2.08333%' },
 							position: 'relative',
 							flexDirection: { mobile: 'column', tablet: 'row' }
 						}}>
@@ -162,6 +174,84 @@ const RetailSection = () => {
 								}}
 							/>
 						</Box>
+					</Box>
+				</Box>
+			</Box>
+			<Box
+				className='apple-accessories'
+				sx={{
+					maxWidth: { mobile: '100%', tablet: '736px', laptop: '1440px' },
+					mx: 'auto',
+					width: '100%',
+					display: 'flex',
+					flexDirection: { mobile: 'column', tablet: 'row' },
+					alignItems: 'center',
+					height: '660px'
+				}}>
+				<Box
+					className='left'
+					sx={{
+						backgroundColor: '#f2f2f2',
+						m: { laptop: '0 15px 30px 0', tablet: '0 10px 20px 0', mobile: '0 auto 15px auto' },
+						p: { laptop: '0 4.16667% 276px 4.16667%', tablet: '0 3.74532% 286px 3.74532%', mobile: '0 0 254px 0' },
+						width: { laptop: '50%', tablet: '50%', mobile: '100%' },
+						backgroundImage: {
+							laptop: 'url(./retail/accessories_tile_large_2x.jpg)',
+							tablet: 'url(./retail/accessories_tile_medium_2x.jpg)',
+							mobile: 'url(./retail/accessories_tile_small_2x.jpg)'
+						},
+						backgroundSize: { laptop: '676px 282px', tablet: '510px 177px', mobile: '736px 223px' },
+						backgroundRepeat: 'no-repeat',
+						backgroundPosition: 'center bottom',
+						height: '100%'
+					}}>
+					<Box
+						className='copy_wraper'
+						sx={{ textAlign: 'center', p: { mobile: '45px 0 0 0', tablet: '45px 0 0 0', laptop: '60px 0 0 0' } }}>
+						<Typography variant='eyebrow' component='h4' sx={{ mb: '8.4px' }}>
+							Accessories
+						</Typography>
+						<Typography variant='headline' component='p' sx={{ maxWidth: '282px', mx: 'auto' }}>
+							Explore Mac accessories.
+						</Typography>
+						<HeroButton sx={{ mt: '13.8px' }}>shop</HeroButton>
+					</Box>
+				</Box>
+				<Box
+					className='right'
+					sx={{
+						backgroundColor: '#f2f2f2',
+						m: { laptop: '0 0 30px 15px', tablet: '0 0 20px 10px', mobile: '0 auto 15px auto' },
+						p: { laptop: '0 4.16667% 320px 4.16667%', tablet: '0 3.74532% 214px 3.74532%', mobile: '0 0 196px 0' },
+						width: { laptop: '50%', tablet: '50%', mobile: '100%' },
+						backgroundImage: {
+							laptop: 'url(./retail/trade_in_mac_tile_large_2x.jpg)',
+							tablet: 'url(./retail/trade_in_mac_tile_medium_2x.jpg)',
+							mobile: 'url(./retail/trade_in_mac_tile_small_2x.jpg)'
+						},
+						backgroundSize: { laptop: '422px 282px', tablet: '294px 174px', mobile: '736px 170px' },
+						backgroundRepeat: 'no-repeat',
+						backgroundPosition: 'center bottom',
+						height: '100%'
+					}}>
+					<Box
+						className='copy_wraper'
+						sx={{ textAlign: 'center', p: { mobile: '45px 0 0 0', tablet: '45px 0 0 0', laptop: '60px 0 0 0' } }}>
+						<Typography variant='eyebrow' component='h4' sx={{ mb: '8.4px' }}>
+							Apple trade in
+						</Typography>
+						<Typography
+							variant='headline'
+							component='p'
+							sx={{
+								maxWidth: { laptop: '80%', tablet: '82%', mobile: '72%' },
+								minWidth: { laptop: '400px', tablet: '248px', mobile: '270px' },
+								mx: 'auto'
+							}}>
+							Get credit toward a new Mac
+						</Typography>
+						<Box sx={{ mt: '13.6px' }}></Box>
+						<CustomButton>find your trde in value</CustomButton>
 					</Box>
 				</Box>
 			</Box>
