@@ -6,6 +6,7 @@ import Ribbon from '../component/ribbon/Ribbon';
 import Hero from '../sections/iMac_hero/Hero';
 import Compare from '../sections/compare/Compare';
 import RetailSection from '../sections/retail/RetailSection';
+import BuystripSection from '../sections/buystrip/BuystripSection';
 const Home = () => {
 	return (
 		<React.Fragment>
@@ -16,6 +17,7 @@ const Home = () => {
 				<Hero />
 				<Compare />
 				<RetailSection />
+				<BuystripSection />
 			</Grid>
 		</React.Fragment>
 	);
