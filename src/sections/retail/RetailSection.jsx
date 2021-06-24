@@ -40,11 +40,11 @@ const RetailSection = () => {
 						className='banner-container'
 						sx={{
 							width: '100%',
-							// height: '100%',
+
 							backgroundImage: 'linear-gradient(135deg, #fbd0b8 0%, #fcdcbe 48%, #fcdcbe 49%, #fceac3 100%)',
 							display: 'flex',
 							p: { mobile: '213px 0 58px 0', tablet: '57px 0', laptop: '138px 0' },
-							// m: { mobile: 0, tablet: '0 2.08333%' },
+
 							height: { mobile: '415px', tablet: '284px', laptop: '490px' }
 						}}>
 						<Box className='copy-container' sx={{ flexBasis: { mobile: '100%', tablet: '50%', laptop: '41.66667%' } }}>
@@ -185,8 +185,7 @@ const RetailSection = () => {
 					width: '100%',
 					display: 'flex',
 					flexDirection: { mobile: 'column', tablet: 'row' },
-					alignItems: 'center',
-					height: '660px'
+					alignItems: 'center'
 				}}>
 				<Box
 					className='left'
@@ -252,6 +251,89 @@ const RetailSection = () => {
 						</Typography>
 						<Box sx={{ mt: '13.6px' }}></Box>
 						<CustomButton>find your trde in value</CustomButton>
+					</Box>
+				</Box>
+			</Box>
+			<Box
+				className='macos-monterey'
+				sx={{
+					maxWidth: { mobile: '100%', tablet: '736px', laptop: '1440px' },
+					mx: 'auto',
+					width: '100%',
+					display: 'flex',
+					flexDirection: { mobile: 'column', tablet: 'row' },
+					alignItems: 'center',
+					mb: { mobile: '0px', tablet: '25px', laptop: '30px' }
+				}}>
+				<Box
+					className='banner-container'
+					sx={{
+						width: '100%',
+						height: '100%',
+						display: 'flex',
+						p: { mobile: '40px 0', tablet: '65px 0', laptop: '70px 0' },
+						flexDirection: { mobile: 'column', tablet: 'row' },
+						background: '#F2F2F2',
+						minHeight: '510px'
+					}}>
+					<Box
+						className='flex_wrapper'
+						sx={{
+							width: { mobile: '100%', tablet: '50%' },
+							maxWidth: { mobile: '100%', tablet: '50%' },
+							display: 'flex',
+							flexDirection: 'column',
+							alignItems: 'center',
+							flexShrink: 0,
+							m: { mobile: '0 auto', tablet: 'auto auto auto 4%', laptop: 'auto -10px auto 6.4%' },
+							position: 'relative',
+							zIndex: 2
+						}}>
+						<Typography variant='eyebrow' component='h2' sx={{ textAlign: 'center', mb: '8.4px' }}>
+							<Typography variant='caption' sx={{ color: '#bf4800', display: 'block' }}>
+								Available this fall
+							</Typography>
+							macOS Monterey
+						</Typography>
+						<Typography variant='tile_headline' component='h3' sx={{ textAlign: 'center' }}>
+							High powered meets <br />
+							"Hi everyone.
+						</Typography>
+						<Box sx={{ mt: '13.6px' }}></Box>
+						<CustomButton>learn more</CustomButton>
+					</Box>
+					<Box
+						className='flex_wrapper'
+						sx={{
+							width: { mobile: '100%', tablet: '50%' },
+							maxWidth: { mobile: '100%', tablet: '50%' },
+							display: 'flex',
+							flexDirection: 'column',
+							alignItems: 'center',
+							justifyContent: 'center',
+							flexShrink: 1,
+							m: { mobile: '30px 0 0 0', tablet: '10px 0 0 0', laptop: '0' },
+							overflow: 'hidden'
+						}}>
+						<Box
+							className='monterey-image'
+							component='figure'
+							sx={{
+								position: 'relative',
+								zIndex: 1,
+								width: { mobile: '322px', tablet: '332px', laptop: '100%' },
+								maxWidth: { laptop: '618px' },
+								height: { mobile: '192px', tablet: '198px', laptop: '100%' },
+
+								backgroundImage: {
+									mobile: 'url(./retail/monterey_tile_small_2x.jpg)',
+									tablet: 'url(./retail/monterey_tile_medium_2x.jpg)',
+									laptop: 'url(./retail/monterey_tile_large_2x.jpg)'
+								},
+								margin: { mobile: '0px', tablet: '0px', laptop: '0px' },
+								backgroundSize: 'cover',
+								backgroundRepeat: 'no-repeat'
+							}}></Box>
 					</Box>
 				</Box>
 			</Box>
