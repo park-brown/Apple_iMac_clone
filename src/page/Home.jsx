@@ -5,6 +5,7 @@ import { Grid } from '@material-ui/core';
 import Ribbon from '../component/ribbon/Ribbon';
 import Hero from '../sections/iMac_hero/Hero';
 import Compare from '../sections/compare/Compare';
+import RetailSection from '../sections/retail/RetailSection';
 const Home = () => {
 	return (
 		<React.Fragment>
@@ -14,6 +15,7 @@ const Home = () => {
 				<Ribbon />
 				<Hero />
 				<Compare />
+				<RetailSection />
 			</Grid>
 		</React.Fragment>
 	);
