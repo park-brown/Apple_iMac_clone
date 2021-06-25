@@ -8,6 +8,7 @@ import Compare from '../sections/compare/Compare';
 import RetailSection from '../sections/retail/RetailSection';
 import BuystripSection from '../sections/buystrip/BuystripSection';
 import WhatMakesMacSection from '../sections/whatmakesMac/WhatMakesMacSection';
+import BulidInApps from '../sections/bulidiInApps/BulidInApps';
 const Home = () => {
 	return (
 		<React.Fragment>
@@ -20,6 +21,7 @@ const Home = () => {
 				<RetailSection />
 				<BuystripSection />
 				<WhatMakesMacSection />
+				<BulidInApps />
 			</Grid>
 		</React.Fragment>
 	);
