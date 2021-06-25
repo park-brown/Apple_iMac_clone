@@ -1,7 +1,7 @@
 import { Button } from '@material-ui/core';
 import { styled } from '@material-ui/core/styles';
 import ArrowForwardIosIcon from '@material-ui/icons/ArrowForwardIos';
-const LinkButton = styled(Button, { name: 'learn-more-button' })(({ theme }) => ({
+const LinkButton = styled(Button, { name: 'learn-more-button' })(({ theme, color }) => ({
 	[theme.breakpoints.up('mobile')]: {
 		...theme.typography.body,
 		color: theme.palette.common.link,
@@ -14,6 +14,7 @@ const LinkButton = styled(Button, { name: 'learn-more-button' })(({ theme }) => 
 }));
 const CustomButton = (props) => {
 	const { children } = props;
+
 	return <LinkButton endIcon={<ArrowForwardIosIcon />}>{children}</LinkButton>;
 };
 
