@@ -1,6 +1,5 @@
 import React from 'react';
-import { Grid, Box, Typography, Button } from '@material-ui/core';
-import { styled } from '@material-ui/core/styles';
+import { Grid, Box, Typography } from '@material-ui/core';
 import { useTheme } from '@material-ui/core/styles';
 import CustomButton from '../../component/LinkButton/LinkButton';
 

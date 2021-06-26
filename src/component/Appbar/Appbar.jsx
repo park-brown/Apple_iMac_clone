@@ -118,7 +118,7 @@ const AppHeader = (props) => {
 		));
 	};
 	return (
-		<AppBar position='relative' sx={{ bgcolor: 'rgba(0,0,0,0.92)' }} component='nav'>
+		<AppBar position='relative' sx={{ bgcolor: 'rgba(0,0,0,0.92)', flexShrink: 1 }} component='nav'>
 			<Toolbar
 				sx={{
 					mx: 'auto',

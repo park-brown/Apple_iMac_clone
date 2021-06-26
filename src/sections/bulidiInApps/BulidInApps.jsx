@@ -71,7 +71,11 @@ const BulidInApps = () => {
 		<Box
 			component='section'
 			className='build-in-apps-section'
-			sx={{ width: '100%', mt: { mobile: '15px', tablet: '25px', laptop: '30px' } }}>
+			sx={{
+				width: '100%',
+				mt: { mobile: '15px', tablet: '25px', laptop: '30px' },
+				pb: { mobile: '60px', tablet: '70px' }
+			}}>
 			<Box
 				className='section-content'
 				sx={{
