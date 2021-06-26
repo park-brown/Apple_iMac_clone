@@ -10,6 +10,7 @@ import BuystripSection from '../sections/buystrip/BuystripSection';
 import WhatMakesMacSection from '../sections/whatmakesMac/WhatMakesMacSection';
 import BulidInApps from '../sections/bulidiInApps/BulidInApps';
 import ProApps from '../sections/ProApps/ProApps';
+import MoreMac from '../sections/moreMac/MoreMac';
 const Home = () => {
 	return (
 		<React.Fragment>
@@ -24,6 +25,7 @@ const Home = () => {
 				<WhatMakesMacSection />
 				<BulidInApps />
 				<ProApps />
+				<MoreMac />
 			</Grid>
 		</React.Fragment>
 	);
